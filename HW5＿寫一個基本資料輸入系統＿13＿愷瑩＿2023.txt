@@ -1,0 +1,49 @@
+int result;
+result = 0;
+while (result != 1)
+{
+    //姓名
+    Console.WriteLine("Enter username");
+    string? name = Console.ReadLine();
+    Console.WriteLine("Name: " + name);
+
+    //性別
+    Console.WriteLine("Enter your gender (1.Male 2.Female)");
+    string? gender = Console.ReadLine();   
+    switch (gender)
+    {
+        case "1":
+            gender = "Male";
+            Console.WriteLine("Gender: Male");
+            break;
+        case "2":
+            gender = "Female";
+            Console.WriteLine("Gender: Female");
+            break;
+    }
+
+    //出生年月日
+    Console.WriteLine("Enter your birthday(yy/mm/dd)");
+    string? birthday = Console.ReadLine();
+    Console.WriteLine("Birthday: " + birthday);
+
+    //學號
+    Console.WriteLine("Enter your student ID");
+    string? ID = Console.ReadLine();
+    Console.WriteLine("Student ID: " + ID);
+
+    //
+    Console.WriteLine("Please confirm your personal data. ");
+    Console.WriteLine("Name: " + name);
+    Console.WriteLine("Gender: " + gender);
+    Console.WriteLine("Birthday: " + birthday);
+    Console.WriteLine("Student ID: " + ID);
+    
+    //
+    Console.WriteLine("Confirm your information please press '1'; press '2' to re-enter your information;)");
+    result = Convert.ToInt32(Console.ReadLine());
+    if (result ==1)
+    {
+        Console.WriteLine("You have finish your personal information");
+    }
+}
